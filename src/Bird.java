@@ -7,29 +7,28 @@ public class Bird {
 	int points = 0;
 	boolean hasMate = false;
 	
-	
 	public Bird() {
 		
 	}
 	
-	private void sing() {
+	public void sing() {
 		double foodUsed = 12 * (0.002 * this.reserves) + getB();
-		this.reserves += foodUsed;
+		this.reserves -= foodUsed;
 		pairWithMate();
 	}
 	
-	private void forage() {
-		double foodUsed = 8 + (0.007 * this.reserves) + getB();
-		this.reserves += foodUsed;
+	public void forage() {
+		double foodFound = 8 + (0.007 * this.reserves) + getB();
+		this.reserves += foodFound;
 		findFood();
 	}
 	
-	private void rest() {
+	public void rest() {
 		this.reserves += -3.6;
 	}
 	
 	public boolean isDead() {
-		return this.reserves <= 0;
+		return this.reserves < 0;
 	}
 	
 	private void pairWithMate() {
@@ -45,7 +44,7 @@ public class Bird {
 		}
 	}
 	
-	private void calculatePoints() {
+	public void calculatePoints() {
 		if (hasMate && !isDead()) {
 			points += 2;
 		}
