@@ -1,0 +1,15 @@
+for every point we have to place on grid:
+	
+	if there are no points on the grid already:
+		place that point ANYWHERE on the grid
+		AND 
+		add that point name to the monitoring_constraint list
+
+	else there are already points on the grid:
+		check that those points adhere to constraint:
+			if they don't:
+				try and constrain them
+
+			else:
+				place point randomly on grid
+				add that point name to the monitoring_constraint list

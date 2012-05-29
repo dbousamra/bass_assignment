@@ -1,0 +1,5 @@
+Description of Solution
+
+I chose the Mars Rover problem to submit. I completed the other three questions, but decided to submit Mars Rover because I felt it was the problem most suited to showing off OO design patterns.
+
+My solution utilizes a main runner class (Problem3.java) that handles input and dispatches the Rover and Plateau objects purely to test input cases. It doesn't do much. The Rover class (Rover.java) represents a Mars Rover and is made up of a Position and

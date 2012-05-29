@@ -1,0 +1,12 @@
+Classes you need:
+	
+	Grid
+		And it should have:
+			add_point_to_grid(point)
+			points_already_on_grid (should return a list of point names)
+
+	Constraints
+		And it should have:
+			get_distance
+			get_constraints
+			
